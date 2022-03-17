@@ -1,6 +1,7 @@
-import CExample from '../component/c-example'
-import CReference from '../component/c-reference'
-import CTutorial from '../component/c-tutorial'
+import { CEditor } from '../components/c-editor';
+import CExample from '../components/c-example'
+import CReference from '../components/c-reference'
+import CTutorial from '../components/c-tutorial'
 
 export default function Home({ reference, example }) {
   console.log('references ', reference);
@@ -10,6 +11,7 @@ export default function Home({ reference, example }) {
       <input className="hidden" type="radio" id="tab-example" name="boxlist" />
       <input className="hidden" type="radio" id="tab-tutorial" name="boxlist" />
 
+      <CEditor/>
       <div className="flex justify-center mt-10">
         <label className="mx-2 py-2 px-6 bg-gray-200 rounded-full cursor-pointer" htmlFor="tab-reference">reference</label>
         <label className="mx-2 py-2 px-6 bg-gray-200 rounded-full cursor-pointer" htmlFor="tab-example">example</label>
