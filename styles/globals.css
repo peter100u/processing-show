@@ -1,16 +1,23 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#tab-reference:checked ~ .tab-reference {
+  @apply flex;
+}
+#tab-reference:checked ~ div [for="tab-reference"] {
+  @apply bg-blue-600 text-white;
+}
+#tab-example:checked ~ .tab-example {
+  @apply flex;
+}
+#tab-example:checked ~ div [for="tab-example"] {
+  @apply bg-blue-600 text-white;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+#tab-tutorial:checked ~ .tab-tutorial {
+  @apply flex;
 }
-
-* {
-  box-sizing: border-box;
+#tab-tutorial:checked ~ div [for="tab-tutorial"] {
+  @apply bg-blue-600 text-white;
 }
