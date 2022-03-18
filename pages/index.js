@@ -11,14 +11,14 @@ export default function Home({ reference, example }) {
       <input className="hidden" type="radio" id="tab-example" name="boxlist" />
       <input className="hidden" type="radio" id="tab-tutorial" name="boxlist" />
 
-      <CEditor/>
+      {/* <CEditor/> */}
       <div className="flex justify-center mt-10">
         <label className="mx-2 py-2 px-6 bg-gray-200 rounded-full cursor-pointer" htmlFor="tab-reference">reference</label>
         <label className="mx-2 py-2 px-6 bg-gray-200 rounded-full cursor-pointer" htmlFor="tab-example">example</label>
         <label className="mx-2 py-2 px-6 bg-gray-200 rounded-full cursor-pointer" htmlFor="tab-tutorial">tutorial</label>
       </div>
 
-      <div className="hidden p-8 items-center shadow-lg rounded-lg tab-reference m-auto">
+      <div className="hidden p-8 items-center shadow-lg rounded-lg tab-reference max-h-full max-w-full">
         <CReference reference={reference}></CReference>
       </div>
 

@@ -22,23 +22,21 @@ export default function CExample({ example }) {
     }
 
     return (
-        <div>
+        <div className="w-full">
             <CSearch></CSearch>
             <div>
                 {
                     Object.keys(nodesObject).map(groupTitle => {
                         return <div key={groupTitle}>
                             <h2>{groupTitle}</h2>
-                            {
-                                nodesObject[groupTitle].map(node => {
-                                    return <div key={node['name']} className='mt-4 flex '>
-                                        <CExampleCard nodeBean={{
-                                            nodeInfo: node,
-                                            imageInfo: imageInfoFunction(node['name'])
-                                        }}></CExampleCard>
-                                    </div>
-                                })
-                            }
+                            <div className='flex flex-wrap'>
+                                {
+                                    nodesObject[groupTitle].map(node => {
+                                        return <CExampleCard key={node['name']} nodeBean=
+                                            {{ nodeInfo: node, imageInfo: imageInfoFunction(node['name']) }} />
+                                    })
+                                }
+                            </div>
                         </div>
                     })
                 }

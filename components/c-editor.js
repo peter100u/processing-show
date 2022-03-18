@@ -9,7 +9,7 @@ export const CEditor = () => {
 
   useEffect(() => {
     const startState = EditorState.create({
-      doc: 'Hello World', extensions: [keymap.of(defaultKeymap)],
+      doc: 'Hello World for peter ', extensions: [keymap.of(defaultKeymap)],
     });
 
     const view = new EditorView({state: startState, parent: editor.current});
