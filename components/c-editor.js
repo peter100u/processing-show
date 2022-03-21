@@ -4,6 +4,7 @@ import {EditorState} from '@codemirror/state';
 import {EditorView, keymap} from '@codemirror/view';
 import {defaultKeymap} from '@codemirror/commands';
 
+// https://dev.to/adamcollier/adding-codemirror-6-to-a-react-project-36hl
 export const CEditor = () => {
   const editor = useRef();
 

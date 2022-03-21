@@ -18,7 +18,7 @@ export default function Home({ reference, example }) {
         <label className="mx-2 py-2 px-6 bg-gray-200 rounded-full cursor-pointer" htmlFor="tab-tutorial">tutorial</label>
       </div>
 
-      <div className="hidden p-8 items-center shadow-lg rounded-lg tab-reference max-h-full max-w-full">
+      <div className="hidden p-8 items-center tab-reference max-h-full max-w-full">
         <CReference reference={reference}></CReference>
       </div>
 
