@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { CEditor } from '../components/c-editor';
 import CExample from '../components/c-example'
 import CReference from '../components/c-reference'
@@ -11,7 +12,8 @@ export default function Home({ reference, example }) {
       <input className="hidden" type="radio" id="tab-example" name="boxlist" />
       <input className="hidden" type="radio" id="tab-tutorial" name="boxlist" />
 
-      {/* <CEditor/> */}
+      <Link href='/editor'>open editor page</Link>
+      
       <div className="flex justify-center mt-10">
         <label className="mx-2 py-2 px-6 bg-gray-200 rounded-full cursor-pointer" htmlFor="tab-reference">reference</label>
         <label className="mx-2 py-2 px-6 bg-gray-200 rounded-full cursor-pointer" htmlFor="tab-example">example</label>
